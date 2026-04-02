@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <meta property="og:title" content="FROZEN X COMMUNITY">
-    <meta property="og:description" content="YouTube Content Creator | MTA & SAMP Developer">
-    <meta property="og:image" content="https://placehold.co/400x400/ff0000/white?text=FROZEN">
+    <meta property="og:title" content="FROZEN X COMMUNITY | CYON EDITION">
+    <meta property="og:description" content="YouTube Content Creator | MTA & SAMP Developer | Cyan Theme">
+    <meta property="og:image" content="https://placehold.co/400x400/00e5ff/0a0a0a?text=FROZEN+CYAN">
     <meta property="og:url" content="https://canalopa24hrs.site/">
     <meta property="og:type" content="website">
-    <title>FROZEN X COMMUNITY | REKT_FTW</title>
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23ff0000'/%3E%3Ctext x='50' y='70' font-size='50' text-anchor='middle' fill='white' font-weight='bold'%3EFX%3C/text%3E%3C/svg%3E">
+    <title>AFTER HOURS PVT</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%2300e5ff'/%3E%3Ctext x='50' y='70' font-size='50' text-anchor='middle' fill='%230a0a0a' font-weight='bold'%3EFX%3C/text%3E%3C/svg%3E">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         * {
@@ -19,15 +19,15 @@
         }
 
         body {
-            background-color: #0a0a0a;
-            color: white;
-            font-family: 'Segoe UI', 'Arial', sans-serif;
+            background-color: #0a0f12;
+            color: #eef5ff;
+            font-family: 'Segoe UI', 'Poppins', 'Arial', sans-serif;
             overflow-x: hidden;
             position: relative;
             min-height: 100vh;
         }
 
-        /* Animated gradient background */
+        /* Animated cyan gradient background */
         body::before {
             content: '';
             position: fixed;
@@ -35,7 +35,19 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: radial-gradient(circle at 20% 30%, rgba(255,0,0,0.08), transparent 70%);
+            background: radial-gradient(circle at 30% 20%, rgba(0, 229, 255, 0.12), transparent 75%);
+            pointer-events: none;
+            z-index: -2;
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 80% 90%, rgba(0, 200, 220, 0.08), transparent 70%);
             pointer-events: none;
             z-index: -2;
         }
@@ -56,10 +68,10 @@
 
         .floating-icon {
             position: absolute;
-            color: #ff0000;
+            color: #00e5ff;
             opacity: 0.12;
             animation: floatIcon 22s linear infinite;
-            filter: drop-shadow(0 0 2px rgba(255,0,0,0.5));
+            filter: drop-shadow(0 0 3px rgba(0, 229, 255, 0.4));
         }
 
         .rain-icon {
@@ -67,26 +79,27 @@
             animation: iconRain 9s linear infinite;
         }
 
-        .rain-icon.red {
-            color: #ff0000;
+        .rain-icon.cyan {
+            color: #00e5ff;
             opacity: 0.35;
+            text-shadow: 0 0 4px #00ccdd;
         }
 
-        .rain-icon.white {
-            color: #ffffff;
+        .rain-icon.light {
+            color: #b5ffff;
             opacity: 0.25;
         }
 
         @keyframes floatIcon {
             0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
-            10% { opacity: 0.15; }
+            10% { opacity: 0.2; }
             90% { opacity: 0.15; }
             100% { transform: translateY(-100px) rotate(360deg); opacity: 0; }
         }
 
         @keyframes iconRain {
             0% { transform: translateY(-150px) rotate(0deg); opacity: 0; }
-            10% { opacity: 0.4; }
+            10% { opacity: 0.45; }
             90% { opacity: 0.4; }
             100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
         }
@@ -97,7 +110,7 @@
             justify-content: center;
             gap: 3rem;
             padding: 2rem 3rem;
-            animation: fadeDown 1s ease;
+            animation: fadeDown 0.9s ease;
             margin: 1rem 2rem;
             flex-wrap: wrap;
         }
@@ -105,59 +118,61 @@
         .header-text {
             text-align: left;
             animation: fadeIn 1s ease;
-            background: rgba(0,0,0,0.5);
-            backdrop-filter: blur(4px);
-            padding: 1.5rem;
-            border-radius: 30px;
-            border-left: 4px solid #ff0000;
+            background: rgba(10, 20, 25, 0.6);
+            backdrop-filter: blur(8px);
+            padding: 1.6rem 2rem;
+            border-radius: 42px;
+            border-left: 5px solid #00e5ff;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
         }
 
         .header-text h1 {
             font-size: 2.8rem;
-            color: #ff0000;
+            color: #00e5ff;
             margin-bottom: 1rem;
             text-transform: uppercase;
             font-weight: 800;
             letter-spacing: 3px;
-            text-shadow: 0 0 8px rgba(255,0,0,0.6);
+            text-shadow: 0 0 12px rgba(0, 229, 255, 0.6);
         }
 
         .header-text p {
             font-size: 1.2rem;
-            color: #f0f0f0;
+            color: #d9f0ff;
             margin: 0.6rem 0;
             font-weight: 400;
             letter-spacing: 0.5px;
             position: relative;
-            padding-left: 24px;
+            padding-left: 26px;
         }
 
         .header-text p::before {
-            content: '✦';
+            content: '❄️';
             position: absolute;
             left: 0;
-            color: #ff0000;
+            color: #00e5ff;
             font-weight: bold;
+            filter: drop-shadow(0 0 2px cyan);
         }
 
         .logo img {
             width: 180px;
             height: 180px;
             border-radius: 50%;
-            border: 4px solid #ff0000;
-            box-shadow: 0 0 25px rgba(255, 0, 0, 0.5);
+            border: 4px solid #00e5ff;
+            box-shadow: 0 0 28px rgba(0, 229, 255, 0.6);
             transition: all 0.5s cubic-bezier(0.2, 0.9, 0.4, 1.1);
             object-fit: cover;
-            background: #111;
+            background: #0a1217;
         }
 
         .logo img:hover {
-            transform: scale(1.08) rotate(5deg);
-            box-shadow: 0 0 40px rgba(255, 0, 0, 0.8);
-            border-color: #ff4444;
+            transform: scale(1.08) rotate(3deg);
+            box-shadow: 0 0 45px rgba(0, 229, 255, 0.9);
+            border-color: #7ffaff;
         }
 
-        /* Grid cards */
+        /* Grid cards - CYON theme */
         .grid-container {
             display: grid;
             grid-template-columns: repeat(5, 1fr);
@@ -168,17 +183,18 @@
         }
 
         .card {
-            background: linear-gradient(145deg, #202020, #121212);
-            border-radius: 28px;
+            background: linear-gradient(145deg, #122129, #0a141c);
+            border-radius: 32px;
             padding: 1.8rem 1.2rem;
             text-align: center;
             transition: all 0.4s ease;
-            border: 1px solid rgba(255,0,0,0.3);
+            border: 1px solid rgba(0, 229, 255, 0.35);
             backdrop-filter: blur(2px);
             position: relative;
             overflow: hidden;
             animation: fadeIn 0.6s ease;
             cursor: pointer;
+            box-shadow: 0 6px 14px rgba(0,0,0,0.4);
         }
 
         .card::before {
@@ -188,7 +204,7 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 50, 50, 0.15), transparent);
+            background: linear-gradient(90deg, transparent, rgba(0, 229, 255, 0.2), transparent);
             transition: 0.6s;
         }
 
@@ -198,23 +214,23 @@
 
         .card:hover {
             transform: translateY(-12px) scale(1.02);
-            box-shadow: 0 20px 35px rgba(255, 0, 0, 0.25);
-            border-color: #ff3a3a;
+            box-shadow: 0 20px 35px rgba(0, 229, 255, 0.3);
+            border-color: #2afcff;
         }
 
-        /* App style image wrapper with fallback */
         .card-img {
             width: 120px;
             height: 120px;
             margin: 0 auto 1.2rem;
-            background: #1e1e1e;
-            border-radius: 28px;
+            background: #0e1a22;
+            border-radius: 30px;
             display: flex;
             align-items: center;
             justify-content: center;
             transition: transform 0.4s ease;
             overflow: hidden;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+            border: 1px solid rgba(0,229,255,0.3);
         }
 
         .card-img img {
@@ -229,26 +245,26 @@
         }
 
         .card h2 {
-            color: #ff3a3a;
+            color: #2afcff;
             margin-bottom: 0.8rem;
             font-size: 1.5rem;
             font-weight: 700;
-            letter-spacing: -0.3px;
+            letter-spacing: -0.2px;
+            text-shadow: 0 0 4px rgba(0,229,255,0.4);
         }
 
         .card p {
-            color: #bbbbbb;
+            color: #bfd9f0;
             margin-bottom: 1.4rem;
             font-size: 0.9rem;
-            line-height: 1.4;
-            padding: 0 0.3rem;
+            line-height: 1.45;
         }
 
         .btn {
             display: inline-block;
-            background: linear-gradient(95deg, #cc0000, #ff4d4d);
-            color: white;
-            padding: 0.7rem 1.4rem;
+            background: linear-gradient(95deg, #0099cc, #00d4ff);
+            color: #0a0f12;
+            padding: 0.7rem 1.5rem;
             text-decoration: none;
             border-radius: 40px;
             transition: all 0.25s ease;
@@ -256,14 +272,15 @@
             text-transform: uppercase;
             letter-spacing: 1px;
             font-size: 0.8rem;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
             border: none;
         }
 
         .btn:hover {
             transform: scale(1.05);
-            background: linear-gradient(95deg, #ff2222, #ff7777);
-            box-shadow: 0 0 18px rgba(255, 0, 0, 0.6);
+            background: linear-gradient(95deg, #00bbff, #33ffff);
+            box-shadow: 0 0 18px rgba(0, 229, 255, 0.7);
+            color: #000;
         }
 
         /* Video section */
@@ -273,14 +290,15 @@
         }
 
         .video-section h2 {
-            color: #ff2a2a;
+            color: #2afcff;
             font-size: 2.4rem;
             margin-bottom: 2rem;
             text-transform: uppercase;
             letter-spacing: 2px;
             display: inline-block;
-            border-bottom: 3px solid #ff0000;
+            border-bottom: 3px solid #00e5ff;
             padding-bottom: 0.5rem;
+            text-shadow: 0 0 6px rgba(0,229,255,0.4);
         }
 
         .video-container {
@@ -296,17 +314,17 @@
             padding-bottom: 56.25%;
             height: 0;
             overflow: hidden;
-            border-radius: 24px;
-            border: 2px solid #ff3a3a;
-            box-shadow: 0 12px 28px rgba(0,0,0,0.5);
+            border-radius: 28px;
+            border: 2px solid #1ad9ff;
+            box-shadow: 0 12px 28px rgba(0,0,0,0.5), 0 0 10px rgba(0,229,255,0.3);
             transition: all 0.3s ease;
             background: #000;
         }
 
         .video-wrapper:hover {
             transform: translateY(-6px);
-            border-color: #ff7a7a;
-            box-shadow: 0 0 28px rgba(255, 0, 0, 0.4);
+            border-color: #7ffbff;
+            box-shadow: 0 0 28px rgba(0, 229, 255, 0.5);
         }
 
         .video-wrapper iframe {
@@ -318,14 +336,14 @@
             border: none;
         }
 
-        /* Footer */
         .footer-note {
             text-align: center;
             padding: 2rem;
             font-size: 0.85rem;
-            color: #888;
-            border-top: 1px solid rgba(255,0,0,0.2);
+            color: #6d9eb0;
+            border-top: 1px solid rgba(0, 229, 255, 0.3);
             margin-top: 1rem;
+            backdrop-filter: blur(4px);
         }
 
         @keyframes fadeIn {
@@ -345,7 +363,7 @@
         @media (max-width: 900px) {
             .grid-container { grid-template-columns: repeat(2, 1fr); }
             .header-container { flex-direction: column; text-align: center; gap: 1.5rem; }
-            .header-text { text-align: center; border-left: none; border-top: 3px solid #ff0000; }
+            .header-text { text-align: center; border-left: none; border-top: 4px solid #00e5ff; border-radius: 32px; }
             .header-text p { padding-left: 0; }
             .header-text p::before { display: none; }
         }
@@ -362,7 +380,6 @@
 <div class="background-icons"></div>
 <div class="foreground-icons"></div>
 
-<!-- Background audio (user interaction required) -->
 <audio id="bgAudio" loop preload="auto">
     <source src="https://audio.jukehost.co.uk/UncosaROTnwuhPux4ACO1xXzFxganHnN" type="audio/mpeg">
     Your browser does not support audio.
@@ -371,41 +388,41 @@
 <header>
     <div class="header-container">
         <div class="logo">
-            <!-- embedded base64 logo: FROZEN X style emblem (red/white) -->
-            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Ccircle cx='100' cy='100' r='95' fill='%23111111' stroke='%23ff0000' stroke-width='5'/%3E%3Cpath fill='%23ff0000' d='M70,60 L130,60 L130,80 L100,100 L130,120 L130,140 L70,140 L70,120 L100,100 L70,80 Z'/%3E%3Ctext x='100' y='175' font-size='24' text-anchor='middle' fill='white' font-weight='bold'%3EFROZEN%3C/text%3E%3C/svg%3E"
-                 alt="Frozen X Logo">
+            <!-- Cyan styled logo with frozen emblem -->
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Ccircle cx='100' cy='100' r='95' fill='%230e1a24' stroke='%2300e5ff' stroke-width='6'/%3E%3Cpath fill='%2300e5ff' d='M70,60 L130,60 L130,80 L100,100 L130,120 L130,140 L70,140 L70,120 L100,100 L70,80 Z'/%3E%3Ctext x='100' y='175' font-size='24' text-anchor='middle' fill='%23b5ffff' font-weight='bold'%3EFROZEN%3C/text%3E%3C/svg%3E"
+                 alt="Frozen X Cyan Logo">
         </div>
         <div class="header-text">
-            <h1>❄️ FROZEN X CMT</h1>
+            <h1>❄️ FROZEN X CMT | CYON</h1>
             <p>My Name is R E K T (rekt_ftw)</p>
             <p>⚡ Developer | MTA.Lua, SAMP.pwn Specialist</p>
             <p>💻 JavaScript, CSS, HTML, PHP</p>
-            <p>🎮 Community Builder & Creator</p>
+            <p>🌊 Cyan Theme — Ice & Future Tech</p>
         </div>
     </div>
 </header>
 
 <main>
     <div class="grid-container">
-        <!-- Discord Card -->
+        <!-- Discord Card - Cyan -->
         <div class="card">
             <div class="card-img">
-                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%235865F2' rx='20'/%3E%3Cpath fill='white' d='M70,35c-2.5-1.2-5.2-2-8-2.5c-0.4,0.7-0.8,1.5-1.1,2.3c-3-0.5-6-0.5-9,0c-0.3-0.8-0.7-1.6-1.1-2.3c-2.8,0.5-5.5,1.3-8,2.5c-5,7-6.5,14-5.8,21c2.2,1.6,4.6,2.9,7.1,3.8c0.6-0.8,1.1-1.7,1.5-2.6c-0.8-0.3-1.6-0.7-2.4-1.1c0.2-0.2,0.4-0.3,0.6-0.5c4.8,2.2,10,2.2,14.8,0c0.2,0.2,0.4,0.3,0.6,0.5c-0.8,0.4-1.6,0.8-2.4,1.1c0.4,0.9,0.9,1.8,1.5,2.6c2.5-0.9,4.9-2.2,7.1-3.8C76.5,49,75,42,70,35z M42,55c-2.2,0-4-2-4-4.5s1.8-4.5,4-4.5s4,2,4,4.5S44.2,55,42,55z M58,55c-2.2,0-4-2-4-4.5s1.8-4.5,4-4.5s4,2,4,4.5S60.2,55,58,55z'/%3E%3C/svg%3E"
-                     alt="Discord app icon">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%235865F2' rx='22'/%3E%3Cpath fill='white' d='M70,35c-2.5-1.2-5.2-2-8-2.5c-0.4,0.7-0.8,1.5-1.1,2.3c-3-0.5-6-0.5-9,0c-0.3-0.8-0.7-1.6-1.1-2.3c-2.8,0.5-5.5,1.3-8,2.5c-5,7-6.5,14-5.8,21c2.2,1.6,4.6,2.9,7.1,3.8c0.6-0.8,1.1-1.7,1.5-2.6c-0.8-0.3-1.6-0.7-2.4-1.1c0.2-0.2,0.4-0.3,0.6-0.5c4.8,2.2,10,2.2,14.8,0c0.2,0.2,0.4,0.3,0.6,0.5c-0.8,0.4-1.6,0.8-2.4,1.1c0.4,0.9,0.9,1.8,1.5,2.6c2.5-0.9,4.9-2.2,7.1-3.8C76.5,49,75,42,70,35z M42,55c-2.2,0-4-2-4-4.5s1.8-4.5,4-4.5s4,2,4,4.5S44.2,55,42,55z M58,55c-2.2,0-4-2-4-4.5s1.8-4.5,4-4.5s4,2,4,4.5S60.2,55,58,55z'/%3E%3C/svg%3E"
+                     alt="Discord">
             </div>
             <h2>Discord</h2>
-            <p>Join our exclusive community, events, and live chats with developers!</p>
+            <p>Join our cyan community, events & developer chats!</p>
             <a href="https://discord.gg/eh4V7dsh9V" target="_blank" class="btn">Join Now</a>
         </div>
 
         <!-- YouTube Card -->
         <div class="card">
             <div class="card-img">
-                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23FF0000' rx='20'/%3E%3Cpath fill='white' d='M70,45L45,30v30L70,45z'/%3E%3C/svg%3E"
-                     alt="YouTube app icon">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23FF0000' rx='22'/%3E%3Cpath fill='white' d='M70,45L45,30v30L70,45z'/%3E%3C/svg%3E"
+                     alt="YouTube">
             </div>
             <h2>YouTube</h2>
-            <p>Gameplays, tutorials, and exclusive content. Subscribe now!</p>
+            <p>Gameplays, coding tutorials & exclusive content.</p>
             <a href="https://youtube.com/@jsmtricky?si=tu1bLQtpYt-fAWdZ" target="_blank" class="btn">Watch Now</a>
         </div>
 
@@ -413,95 +430,95 @@
         <div class="card">
             <div class="card-img">
                 <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23E4405F' rx='25'/%3E%3Ccircle cx='50' cy='50' r='14' fill='white'/%3E%3Ccircle cx='50' cy='50' r='22' fill='none' stroke='white' stroke-width='4'/%3E%3Ccircle cx='73' cy='27' r='4' fill='white'/%3E%3C/svg%3E"
-                     alt="Instagram icon">
+                     alt="Instagram">
             </div>
             <h2>Instagram</h2>
-            <p>Behind the scenes, updates, and daily stories from REKT.</p>
+            <p>Behind the scenes, updates & daily stories.</p>
             <a href="https://www.instagram.com/wanted_trippy/" target="_blank" class="btn">Follow</a>
         </div>
 
         <!-- Free Mods Site Card -->
         <div class="card">
             <div class="card-img">
-                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%232c3e50' rx='20'/%3E%3Cpath fill='%23f1c40f' d='M30,35h40v8H30z M30,50h30v8H30z M30,65h20v8H30z'/%3E%3Ctext x='70' y='75' fill='white' font-size='28'%3E⚙%3C/text%3E%3C/svg%3E"
-                     alt="Mods site">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23133c4a' rx='22'/%3E%3Cpath fill='%2300e5ff' d='M30,35h40v8H30z M30,50h30v8H30z M30,65h20v8H30z'/%3E%3Ctext x='70' y='75' fill='%23b5ffff' font-size='28'%3E⚙%3C/text%3E%3C/svg%3E"
+                     alt="Mods">
             </div>
             <h2>Free Mods Site</h2>
-            <p>Exclusive mods, scripts, and resources for MTA & SA-MP!</p>
+            <p>Exclusive mods & resources for MTA & SA-MP.</p>
             <a href="https://panel.marmatheevu.fun/" target="_blank" class="btn">Explore</a>
         </div>
 
         <!-- Hosting Card -->
         <div class="card">
             <div class="card-img">
-                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23007396' rx='20'/%3E%3Cpath fill='white' d='M50,25c-13,0-23,10-23,23c0,8,4,15,10,19v8c0,2,2,4,4,4h18c2,0,4-2,4-4v-8c6-4,10-11,10-19C73,35,63,25,50,25z M50,40c3,0,5,2,5,5s-2,5-5,5s-5-2-5-5S47,40,50,40z'/%3E%3C/svg%3E"
-                     alt="Hosting server">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23007396' rx='22'/%3E%3Cpath fill='%2300ffff' d='M50,25c-13,0-23,10-23,23c0,8,4,15,10,19v8c0,2,2,4,4,4h18c2,0,4-2,4-4v-8c6-4,10-11,10-19C73,35,63,25,50,25z M50,40c3,0,5,2,5,5s-2,5-5,5s-5-2-5-5S47,40,50,40z'/%3E%3C/svg%3E"
+                     alt="Hosting">
             </div>
             <h2>Hosting</h2>
-            <p>24/7 high-performance servers with top support for your projects.</p>
+            <p>24/7 high-performance servers with full support.</p>
             <a href="https://discord.gg/Rh76f8anpA" target="_blank" class="btn">Get Hosting</a>
         </div>
     </div>
 
     <section class="video-section">
-        <h2>📺 Latest Videos</h2>
+        <h2>🌀 Latest Videos</h2>
         <div class="video-container">
             <div class="video-wrapper">
-                <iframe src="https://www.youtube.com/embed/3mpWDW22Z-s" title="Frozen X Video 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/3mpWDW22Z-s" title="Frozen X Cyan Video 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             <div class="video-wrapper">
-                <iframe src="https://www.youtube.com/embed/S2kSJ8g_9L4" title="Frozen X Video 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/S2kSJ8g_9L4" title="Frozen X Cyan Video 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>
     </section>
 </main>
 
 <div class="footer-note">
-    <i class="fas fa-snowflake" style="color:#ff0000"></i> FROZEN X COMMUNITY — Coding, Modding, Gaming <i class="fas fa-fire" style="color:#ff6666"></i>
+    <i class="fas fa-icicles" style="color:#00e5ff"></i> FROZEN X CYON — Code. Create. Conquer. <i class="fas fa-water" style="color:#2afcff"></i>
 </div>
 
 <script>
     (function() {
-        // Create floating background icons (cars, code, game)
+        // CYON floating animated icons (tech & gaming)
         const bgContainer = document.querySelector('.background-icons');
-        const floatingIconsList = [
+        const iconList = [
             'fa-clock', 'fa-car', 'fa-motorcycle', 'fa-hourglass-half',
             'fa-stopwatch', 'fa-car-side', 'fa-truck-fast', 'fa-bicycle',
             'fa-helicopter', 'fa-plane', 'fa-rocket', 'fa-gamepad',
             'fa-code', 'fa-terminal', 'fa-laptop-code', 'fa-dice-d6',
-            'fa-head-side-goggles', 'fa-microchip'
+            'fa-head-side-goggles', 'fa-microchip', 'fa-cloud-moon', 'fa-fan'
         ];
         for (let i = 0; i < 32; i++) {
             const icon = document.createElement('i');
-            const randIcon = floatingIconsList[Math.floor(Math.random() * floatingIconsList.length)];
+            const randIcon = iconList[Math.floor(Math.random() * iconList.length)];
             icon.className = `fas ${randIcon} floating-icon`;
             icon.style.left = `${Math.random() * 100}%`;
-            const duration = 15 + Math.random() * 18;
+            const duration = 14 + Math.random() * 20;
             icon.style.animationDuration = `${duration}s`;
-            icon.style.animationDelay = `${Math.random() * 20}s`;
+            icon.style.animationDelay = `${Math.random() * 18}s`;
             const size = 18 + Math.random() * 28;
             icon.style.fontSize = `${size}px`;
-            icon.style.opacity = 0.08 + Math.random() * 0.12;
+            icon.style.opacity = 0.1 + Math.random() * 0.12;
             bgContainer.appendChild(icon);
         }
 
-        // Raining icons (foreground)
+        // Foreground raining icons (cyan / ice)
         const fgContainer = document.querySelector('.foreground-icons');
-        const rainIconsSet = ['fa-clock', 'fa-stopwatch', 'fa-hourglass-half', 'fa-timer', 'fa-hourglass-start', 'fa-hourglass-end'];
-        for (let i = 0; i < 14; i++) {
+        const rainIcons = ['fa-snowflake', 'fa-icicles', 'fa-hourglass-half', 'fa-timer', 'fa-droplet', 'fa-water'];
+        for (let i = 0; i < 16; i++) {
             const icon = document.createElement('i');
-            const randIcon = rainIconsSet[Math.floor(Math.random() * rainIconsSet.length)];
-            const isRed = Math.random() > 0.55;
-            icon.className = `fas ${randIcon} rain-icon ${isRed ? 'red' : 'white'}`;
+            const randIcon = rainIcons[Math.floor(Math.random() * rainIcons.length)];
+            const isCyan = Math.random() > 0.5;
+            icon.className = `fas ${randIcon} rain-icon ${isCyan ? 'cyan' : 'light'}`;
             icon.style.left = `${Math.random() * 100}%`;
-            const duration = 6 + Math.random() * 5;
+            const duration = 5 + Math.random() * 7;
             icon.style.animationDuration = `${duration}s`;
             icon.style.animationDelay = `${Math.random() * 6}s`;
-            icon.style.fontSize = `${14 + Math.random() * 22}px`;
+            icon.style.fontSize = `${14 + Math.random() * 24}px`;
             fgContainer.appendChild(icon);
         }
 
-        // Audio handling: play on first user interaction (any click or touch)
+        // Audio handling: first user interaction starts background music
         const audioEl = document.getElementById('bgAudio');
         let audioStarted = false;
 
@@ -509,39 +526,24 @@
             if (!audioStarted) {
                 audioEl.play().then(() => {
                     audioStarted = true;
-                    console.log("Background audio started");
-                }).catch(e => console.log("Audio play blocked until gesture", e));
+                    console.log("🌊 Cyan audio started");
+                }).catch(e => console.log("Audio requires gesture", e));
             }
         }
 
-        // Global event listeners for starting audio (once)
-        const events = ['click', 'touchstart', 'keydown'];
-        events.forEach(ev => {
-            document.body.addEventListener(ev, startAudio, { once: false, passive: true });
-            // but we also ensure it only tries to start once. Use a flag wrapper
-        });
-        // Refined: avoid multiple calls but safe
-        const originalStart = startAudio;
-        window.startAudioOnce = function() {
-            if (!audioStarted) originalStart();
-        };
-        document.body.addEventListener('click', window.startAudioOnce);
-        document.body.addEventListener('touchstart', window.startAudioOnce);
+        const initEvents = ['click', 'touchstart', 'keydown'];
+        const handler = () => startAudio();
+        initEvents.forEach(ev => document.body.addEventListener(ev, handler, { once: false, passive: true }));
         
-        // Also enable hover on cards not needed to spam, but we keep clean
-        // Interactive card shine effect
+        // Cards interaction subtle (also can trigger audio)
         const cards = document.querySelectorAll('.card');
         cards.forEach(card => {
             card.addEventListener('click', (e) => {
-                // do not interfere with links inside card
-                if (e.target.tagName !== 'A' && !e.target.closest('.btn')) {
-                    startAudio(); // gentle background start on card click
-                }
+                if (!e.target.closest('.btn')) startAudio();
             });
         });
-
-        // small fix for embedded video thumbnails to allow audio context
-        console.log("FROZEN X community page ready — dynamic icons & apps");
+        
+        console.log("FROZEN X | CYON THEME ACTIVE — ice & cyan vibes");
     })();
 </script>
 </body>
