@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <meta property="og:title" content="AFTER HOURS PVT">
-    <meta property="og:description" content="Exclusive Developer Community | MTA & SAMP | Cyan Theme">
+    <meta property="og:description" content="Exclusive Developer Community | MTA & SAMP | Cyan Theme | Poster Gallery">
     <meta property="og:image" content="https://i.ibb.co/dsp4xRbc/AFH.jpg">
     <meta property="og:url" content="https://canalopa24hrs.site/">
     <meta property="og:type" content="website">
-    <title>AFTER HOURS PVT</title>
+    <title>AFTER HOURS PVT | Main + Gallery</title>
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%2300e5ff'/%3E%3Ctext x='50' y='70' font-size='50' text-anchor='middle' fill='%230a0a0a' font-weight='bold'%3EAH%3C/text%3E%3C/svg%3E">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
@@ -106,6 +106,7 @@
             100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
         }
 
+        /* Header Section */
         .header-container {
             display: flex;
             align-items: center;
@@ -157,10 +158,6 @@
             filter: drop-shadow(0 0 2px cyan);
         }
 
-        .logo {
-            position: relative;
-        }
-
         .logo img {
             width: 180px;
             height: 180px;
@@ -170,7 +167,6 @@
             transition: all 0.5s cubic-bezier(0.2, 0.9, 0.4, 1.1);
             object-fit: cover;
             background: #0a1217;
-            pointer-events: auto;
         }
 
         .logo img:hover {
@@ -179,7 +175,7 @@
             border-color: #7ffaff;
         }
 
-        /* Grid cards - CYON theme */
+        /* Grid cards - Social Links */
         .grid-container {
             display: grid;
             grid-template-columns: repeat(5, 1fr);
@@ -257,7 +253,6 @@
             margin-bottom: 0.8rem;
             font-size: 1.5rem;
             font-weight: 700;
-            letter-spacing: -0.2px;
             text-shadow: 0 0 4px rgba(0,229,255,0.4);
         }
 
@@ -294,7 +289,7 @@
 
         /* Video section */
         .video-section {
-            padding: 3rem 2rem 5rem;
+            padding: 3rem 2rem 2rem;
             text-align: center;
         }
 
@@ -307,7 +302,6 @@
             display: inline-block;
             border-bottom: 3px solid #00e5ff;
             padding-bottom: 0.5rem;
-            text-shadow: 0 0 6px rgba(0,229,255,0.4);
         }
 
         .video-container {
@@ -345,13 +339,122 @@
             border: none;
         }
 
+        /* Poster Gallery Section */
+        .gallery-section {
+            padding: 4rem 2rem 3rem;
+            background: linear-gradient(180deg, transparent, rgba(0,229,255,0.02), transparent);
+        }
+
+        .gallery-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .gallery-header h2 {
+            font-size: 2.6rem;
+            color: #00e5ff;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 0 0 10px rgba(0,229,255,0.5);
+            border-bottom: 3px solid #00e5ff;
+            display: inline-block;
+            padding-bottom: 0.5rem;
+        }
+
+        .gallery-header p {
+            margin-top: 1rem;
+            color: #a0c4e8;
+            font-size: 1.1rem;
+        }
+
+        .poster-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2rem;
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .poster-card {
+            background: linear-gradient(145deg, #122129, #0a141c);
+            border-radius: 32px;
+            overflow: hidden;
+            border: 1px solid rgba(0, 229, 255, 0.4);
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+            backdrop-filter: blur(2px);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .poster-card:hover {
+            transform: translateY(-8px);
+            border-color: #2afcff;
+            box-shadow: 0 20px 30px rgba(0,229,255,0.2);
+        }
+
+        .poster-image {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            overflow: hidden;
+            background: #000;
+            border-bottom: 2px solid rgba(0,229,255,0.3);
+        }
+
+        .poster-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+            display: block;
+        }
+
+        .poster-card:hover .poster-image img {
+            transform: scale(1.05);
+        }
+
+        .poster-notes {
+            padding: 1.5rem;
+            background: rgba(10, 20, 28, 0.7);
+            flex: 1;
+        }
+
+        .poster-notes h3 {
+            color: #2afcff;
+            font-size: 1.4rem;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            border-left: 3px solid #00e5ff;
+            padding-left: 12px;
+        }
+
+        .poster-notes p {
+            color: #c4e0ff;
+            line-height: 1.5;
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .note-tag {
+            display: inline-block;
+            background: rgba(0,229,255,0.15);
+            color: #7ffbff;
+            border-radius: 20px;
+            padding: 0.25rem 0.8rem;
+            font-size: 0.7rem;
+            margin-top: 0.8rem;
+            letter-spacing: 0.5px;
+        }
+
         .footer-note {
             text-align: center;
             padding: 2rem;
             font-size: 0.85rem;
             color: #6d9eb0;
             border-top: 1px solid rgba(0, 229, 255, 0.3);
-            margin-top: 1rem;
+            margin-top: 2rem;
             backdrop-filter: blur(4px);
         }
 
@@ -375,24 +478,14 @@
             .header-text { text-align: center; border-left: none; border-top: 4px solid #00e5ff; border-radius: 32px; }
             .header-text p { padding-left: 0; }
             .header-text p::before { display: none; }
+            .video-container { grid-template-columns: 1fr; }
         }
         @media (max-width: 650px) {
             .grid-container { grid-template-columns: 1fr; max-width: 380px; margin: 0 auto; }
-            .video-container { grid-template-columns: 1fr; }
             .logo img { width: 140px; height: 140px; }
             .header-text h1 { font-size: 2rem; }
-        }
-
-        /* Disable text selection completely for all elements */
-        * {
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-        }
-        
-        .btn, a {
-            user-select: none;
+            .poster-grid { gap: 1.2rem; }
+            .gallery-header h2 { font-size: 1.8rem; }
         }
     </style>
 </head>
@@ -403,13 +496,12 @@
 
 <audio id="bgAudio" loop preload="auto">
     <source src="https://audio.jukehost.co.uk/UncosaROTnwuhPux4ACO1xXzFxganHnN" type="audio/mpeg">
-    Your browser does not support audio.
 </audio>
 
+<!-- Header Section -->
 <header>
     <div class="header-container">
         <div class="logo">
-            <!-- Your custom AFH logo from ImgBB - direct link integrated -->
             <img src="https://i.ibb.co/dsp4xRbc/AFH.jpg" alt="After Hours PVT Logo">
         </div>
         <div class="header-text">
@@ -422,57 +514,44 @@
     </div>
 </header>
 
+<!-- Social Links Grid -->
 <main>
     <div class="grid-container">
-        <!-- Discord Card -->
         <div class="card">
             <div class="card-img">
-                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%235865F2' rx='22'/%3E%3Cpath fill='white' d='M70,35c-2.5-1.2-5.2-2-8-2.5c-0.4,0.7-0.8,1.5-1.1,2.3c-3-0.5-6-0.5-9,0c-0.3-0.8-0.7-1.6-1.1-2.3c-2.8,0.5-5.5,1.3-8,2.5c-5,7-6.5,14-5.8,21c2.2,1.6,4.6,2.9,7.1,3.8c0.6-0.8,1.1-1.7,1.5-2.6c-0.8-0.3-1.6-0.7-2.4-1.1c0.2-0.2,0.4-0.3,0.6-0.5c4.8,2.2,10,2.2,14.8,0c0.2,0.2,0.4,0.3,0.6,0.5c-0.8,0.4-1.6,0.8-2.4,1.1c0.4,0.9,0.9,1.8,1.5,2.6c2.5-0.9,4.9-2.2,7.1-3.8C76.5,49,75,42,70,35z M42,55c-2.2,0-4-2-4-4.5s1.8-4.5,4-4.5s4,2,4,4.5S44.2,55,42,55z M58,55c-2.2,0-4-2-4-4.5s1.8-4.5,4-4.5s4,2,4,4.5S60.2,55,58,55z'/%3E%3C/svg%3E"
-                     alt="Discord">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%235865F2' rx='22'/%3E%3Cpath fill='white' d='M70,35c-2.5-1.2-5.2-2-8-2.5c-0.4,0.7-0.8,1.5-1.1,2.3c-3-0.5-6-0.5-9,0c-0.3-0.8-0.7-1.6-1.1-2.3c-2.8,0.5-5.5,1.3-8,2.5c-5,7-6.5,14-5.8,21c2.2,1.6,4.6,2.9,7.1,3.8c0.6-0.8,1.1-1.7,1.5-2.6c-0.8-0.3-1.6-0.7-2.4-1.1c0.2-0.2,0.4-0.3,0.6-0.5c4.8,2.2,10,2.2,14.8,0c0.2,0.2,0.4,0.3,0.6,0.5c-0.8,0.4-1.6,0.8-2.4,1.1c0.4,0.9,0.9,1.8,1.5,2.6c2.5-0.9,4.9-2.2,7.1-3.8C76.5,49,75,42,70,35z M42,55c-2.2,0-4-2-4-4.5s1.8-4.5,4-4.5s4,2,4,4.5S44.2,55,42,55z M58,55c-2.2,0-4-2-4-4.5s1.8-4.5,4-4.5s4,2,4,4.5S60.2,55,58,55z'/%3E%3C/svg%3E" alt="Discord">
             </div>
             <h2>Discord</h2>
             <p>Join our Discord community, events & developer chats!</p>
             <a href="https://discord.gg/eh4V7dsh9V" target="_blank" class="btn">Join Now</a>
         </div>
-
-        <!-- YouTube Card -->
         <div class="card">
             <div class="card-img">
-                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23FF0000' rx='22'/%3E%3Cpath fill='white' d='M70,45L45,30v30L70,45z'/%3E%3C/svg%3E"
-                     alt="YouTube">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23FF0000' rx='22'/%3E%3Cpath fill='white' d='M70,45L45,30v30L70,45z'/%3E%3C/svg%3E" alt="YouTube">
             </div>
             <h2>YouTube</h2>
             <p>Gameplays, coding tutorials & exclusive content.</p>
             <a href="https://youtube.com/@jsmtricky?si=tu1bLQtpYt-fAWdZ" target="_blank" class="btn">Watch Now</a>
         </div>
-
-        <!-- Instagram Card -->
         <div class="card">
             <div class="card-img">
-                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23E4405F' rx='25'/%3E%3Ccircle cx='50' cy='50' r='14' fill='white'/%3E%3Ccircle cx='50' cy='50' r='22' fill='none' stroke='white' stroke-width='4'/%3E%3Ccircle cx='73' cy='27' r='4' fill='white'/%3E%3C/svg%3E"
-                     alt="Instagram">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23E4405F' rx='25'/%3E%3Ccircle cx='50' cy='50' r='14' fill='white'/%3E%3Ccircle cx='50' cy='50' r='22' fill='none' stroke='white' stroke-width='4'/%3E%3Ccircle cx='73' cy='27' r='4' fill='white'/%3E%3C/svg%3E" alt="Instagram">
             </div>
             <h2>Instagram</h2>
             <p>Behind the scenes, updates & daily stories.</p>
             <a href="https://www.instagram.com/wanted_trippy/" target="_blank" class="btn">Follow</a>
         </div>
-
-        <!-- Free Mods Site Card -->
         <div class="card">
             <div class="card-img">
-                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23133c4a' rx='22'/%3E%3Cpath fill='%2300e5ff' d='M30,35h40v8H30z M30,50h30v8H30z M30,65h20v8H30z'/%3E%3Ctext x='70' y='75' fill='%23b5ffff' font-size='28'%3E⚙%3C/text%3E%3C/svg%3E"
-                     alt="Mods">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23133c4a' rx='22'/%3E%3Cpath fill='%2300e5ff' d='M30,35h40v8H30z M30,50h30v8H30z M30,65h20v8H30z'/%3E%3Ctext x='70' y='75' fill='%23b5ffff' font-size='28'%3E⚙%3C/text%3E%3C/svg%3E" alt="Mods">
             </div>
             <h2>Free Mods Site</h2>
             <p>Exclusive mods & resources for MTA & SA-MP.</p>
             <a href="https://panel.marmatheevu.fun/" target="_blank" class="btn">Explore</a>
         </div>
-
-        <!-- Hosting Card -->
         <div class="card">
             <div class="card-img">
-                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23007396' rx='22'/%3E%3Cpath fill='%2300ffff' d='M50,25c-13,0-23,10-23,23c0,8,4,15,10,19v8c0,2,2,4,4,4h18c2,0,4-2,4-4v-8c6-4,10-11,10-19C73,35,63,25,50,25z M50,40c3,0,5,2,5,5s-2,5-5,5s-5-2-5-5S47,40,50,40z'/%3E%3C/svg%3E"
-                     alt="Hosting">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23007396' rx='22'/%3E%3Cpath fill='%2300ffff' d='M50,25c-13,0-23,10-23,23c0,8,4,15,10,19v8c0,2,2,4,4,4h18c2,0,4-2,4-4v-8c6-4,10-11,10-19C73,35,63,25,50,25z M50,40c3,0,5,2,5,5s-2,5-5,5s-5-2-5-5S47,40,50,40z'/%3E%3C/svg%3E" alt="Hosting">
             </div>
             <h2>Hosting</h2>
             <p>24/7 high-performance servers with full support.</p>
@@ -480,6 +559,7 @@
         </div>
     </div>
 
+    <!-- Video Section -->
     <section class="video-section">
         <h2>Latest Videos</h2>
         <div class="video-container">
@@ -491,6 +571,106 @@
             </div>
         </div>
     </section>
+
+    <!-- Poster Gallery Section -->
+    <section class="gallery-section">
+        <div class="gallery-header">
+            <h2>📸 AFTER HOURS · POSTER GALLERY</h2>
+            <p>✦ exclusive visuals | cyber & dark aesthetic ✦</p>
+        </div>
+        <div class="poster-grid">
+            <div class="poster-card">
+                <div class="poster-image">
+                    <img src="https://i.ibb.co/rfd0xCGN/iamge1.jpg" alt="Poster 1" loading="lazy" onerror="this.src='https://placehold.co/600x400/0a1a2a/00e5ff?text=AFH+Poster+1'">
+                </div>
+                <div class="poster-notes">
+                    <h3><i class="fas fa-skull"></i> Neon Echoes</h3>
+                    <p>Futuristic city reflections with a mysterious vibe. This piece captures the essence of after-hours solitude — neon lights bleeding into dark rain.</p>
+                    <span class="note-tag">#cyberpunk</span> <span class="note-tag">#neon</span>
+                </div>
+            </div>
+            <div class="poster-card">
+                <div class="poster-image">
+                    <img src="https://i.ibb.co/v6h4xHNz/image.jpg" alt="Poster 2" loading="lazy" onerror="this.src='https://placehold.co/600x400/0a1a2a/00e5ff?text=AFH+Poster+2'">
+                </div>
+                <div class="poster-notes">
+                    <h3><i class="fas fa-crown"></i> Midnight Empire</h3>
+                    <p>Dark royalty theme — shadows and cyan glow merge into a powerful statement of dominance and creativity.</p>
+                    <span class="note-tag">#royal</span> <span class="note-tag">#darkglow</span>
+                </div>
+            </div>
+            <div class="poster-card">
+                <div class="poster-image">
+                    <img src="https://i.ibb.co/cmYmJkb/image2.jpg" alt="Poster 3" loading="lazy" onerror="this.src='https://placehold.co/600x400/0a1a2a/00e5ff?text=AFH+Poster+3'">
+                </div>
+                <div class="poster-notes">
+                    <h3><i class="fas fa-dragon"></i> Frost & Fury</h3>
+                    <p>Ice-cold aesthetic blended with raw energy. Represents the unstoppable force of the AFTER HOURS crew.</p>
+                    <span class="note-tag">#icecold</span> <span class="note-tag">#fury</span>
+                </div>
+            </div>
+            <div class="poster-card">
+                <div class="poster-image">
+                    <img src="https://i.ibb.co/v4KwcJr1/image3.jpg" alt="Poster 4" loading="lazy" onerror="this.src='https://placehold.co/600x400/0a1a2a/00e5ff?text=AFH+Poster+4'">
+                </div>
+                <div class="poster-notes">
+                    <h3><i class="fas fa-mask"></i> Ghost Protocol</h3>
+                    <p>Anonymity meets tech — the unseen side of a developer's mind. Stealth, code, and silent execution.</p>
+                    <span class="note-tag">#anonymous</span> <span class="note-tag">#hacker</span>
+                </div>
+            </div>
+            <div class="poster-card">
+                <div class="poster-image">
+                    <img src="https://i.ibb.co/Jj2XHY3y/image4.jpg" alt="Poster 5" loading="lazy" onerror="this.src='https://placehold.co/600x400/0a1a2a/00e5ff?text=AFH+Poster+5'">
+                </div>
+                <div class="poster-notes">
+                    <h3><i class="fas fa-code"></i> Digital Eclipse</h3>
+                    <p>Code running through veins — the digital transformation of reality. For those who live in the terminal.</p>
+                    <span class="note-tag">#coding</span> <span class="note-tag">#cyber</span>
+                </div>
+            </div>
+            <div class="poster-card">
+                <div class="poster-image">
+                    <img src="https://i.ibb.co/KcNGLzHy/image5.jpg" alt="Poster 6" loading="lazy" onerror="this.src='https://placehold.co/600x400/0a1a2a/00e5ff?text=AFH+Poster+6'">
+                </div>
+                <div class="poster-notes">
+                    <h3><i class="fas fa-eye"></i> All-Seeing Void</h3>
+                    <p>Surveillance and mystery — the watcher in the dark. A reminder that nothing goes unnoticed.</p>
+                    <span class="note-tag">#surveillance</span> <span class="note-tag">#mystery</span>
+                </div>
+            </div>
+            <div class="poster-card">
+                <div class="poster-image">
+                    <img src="https://i.ibb.co/7NkSmdKV/image6.jpg" alt="Poster 7" loading="lazy" onerror="this.src='https://placehold.co/600x400/0a1a2a/00e5ff?text=AFH+Poster+7'">
+                </div>
+                <div class="poster-notes">
+                    <h3><i class="fas fa-cloud-moon"></i> Lunar Cult</h3>
+                    <p>Moonlit rituals and underground gatherings. The AFTER HOURS spirit thrives when the moon rises high.</p>
+                    <span class="note-tag">#lunar</span> <span class="note-tag">#underground</span>
+                </div>
+            </div>
+            <div class="poster-card">
+                <div class="poster-image">
+                    <img src="https://i.ibb.co/VYFc4TVy/image7.jpg" alt="Poster 8" loading="lazy" onerror="this.src='https://placehold.co/600x400/0a1a2a/00e5ff?text=AFH+Poster+8'">
+                </div>
+                <div class="poster-notes">
+                    <h3><i class="fas fa-fire"></i> Phoenix Protocol</h3>
+                    <p>Rising from the ashes — rebirth through fire and code. For those who never give up.</p>
+                    <span class="note-tag">#rebirth</span> <span class="note-tag">#phoenix</span>
+                </div>
+            </div>
+            <div class="poster-card">
+                <div class="poster-image">
+                    <img src="https://i.ibb.co/3yCHMm0C/image8.jpg" alt="Poster 9" loading="lazy" onerror="this.src='https://placehold.co/600x400/0a1a2a/00e5ff?text=AFH+Poster+9'">
+                </div>
+                <div class="poster-notes">
+                    <h3><i class="fas fa-infinity"></i> Eternal Drift</h3>
+                    <p>Endless road, night drives, and the search for something greater. Freedom in the dark.</p>
+                    <span class="note-tag">#nightdrive</span> <span class="note-tag">#infinity</span>
+                </div>
+            </div>
+        </div>
+    </section>
 </main>
 
 <div class="footer-note">
@@ -499,49 +679,36 @@
 
 <script>
     (function() {
-        // Disable right-click context menu to prevent copy attempts
         document.addEventListener('contextmenu', function(e) {
             e.preventDefault();
             return false;
         });
         
-        // Disable keyboard shortcuts for copy (Ctrl+C, Ctrl+U, Ctrl+S)
         document.addEventListener('keydown', function(e) {
             if (e.ctrlKey && (e.key === 'c' || e.key === 'C' || e.key === 'u' || e.key === 'U' || e.key === 's' || e.key === 'S')) {
                 e.preventDefault();
                 return false;
             }
-            // Also disable F12, Ctrl+Shift+I (dev tools shortcuts)
             if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'i'))) {
                 e.preventDefault();
                 return false;
             }
         });
         
-        // CYON floating animated icons (tech & gaming)
         const bgContainer = document.querySelector('.background-icons');
-        const iconList = [
-            'fa-clock', 'fa-car', 'fa-motorcycle', 'fa-hourglass-half',
-            'fa-stopwatch', 'fa-car-side', 'fa-truck-fast', 'fa-bicycle',
-            'fa-helicopter', 'fa-plane', 'fa-rocket', 'fa-gamepad',
-            'fa-code', 'fa-terminal', 'fa-laptop-code', 'fa-dice-d6',
-            'fa-head-side-goggles', 'fa-microchip', 'fa-cloud-moon', 'fa-fan'
-        ];
+        const iconList = ['fa-clock', 'fa-car', 'fa-motorcycle', 'fa-hourglass-half', 'fa-stopwatch', 'fa-car-side', 'fa-truck-fast', 'fa-bicycle', 'fa-helicopter', 'fa-plane', 'fa-rocket', 'fa-gamepad', 'fa-code', 'fa-terminal', 'fa-laptop-code', 'fa-dice-d6', 'fa-microchip', 'fa-cloud-moon'];
         for (let i = 0; i < 32; i++) {
             const icon = document.createElement('i');
             const randIcon = iconList[Math.floor(Math.random() * iconList.length)];
             icon.className = `fas ${randIcon} floating-icon`;
             icon.style.left = `${Math.random() * 100}%`;
-            const duration = 14 + Math.random() * 20;
-            icon.style.animationDuration = `${duration}s`;
+            icon.style.animationDuration = `${14 + Math.random() * 20}s`;
             icon.style.animationDelay = `${Math.random() * 18}s`;
-            const size = 18 + Math.random() * 28;
-            icon.style.fontSize = `${size}px`;
+            icon.style.fontSize = `${18 + Math.random() * 28}px`;
             icon.style.opacity = 0.1 + Math.random() * 0.12;
             bgContainer.appendChild(icon);
         }
 
-        // Foreground raining icons (cyan / ice)
         const fgContainer = document.querySelector('.foreground-icons');
         const rainIcons = ['fa-snowflake', 'fa-icicles', 'fa-hourglass-half', 'fa-timer', 'fa-droplet', 'fa-water'];
         for (let i = 0; i < 16; i++) {
@@ -550,49 +717,23 @@
             const isCyan = Math.random() > 0.5;
             icon.className = `fas ${randIcon} rain-icon ${isCyan ? 'cyan' : 'light'}`;
             icon.style.left = `${Math.random() * 100}%`;
-            const duration = 5 + Math.random() * 7;
-            icon.style.animationDuration = `${duration}s`;
+            icon.style.animationDuration = `${5 + Math.random() * 7}s`;
             icon.style.animationDelay = `${Math.random() * 6}s`;
             icon.style.fontSize = `${14 + Math.random() * 24}px`;
             fgContainer.appendChild(icon);
         }
 
-        // Audio handling: first user interaction starts background music
         const audioEl = document.getElementById('bgAudio');
         let audioStarted = false;
-
         function startAudio() {
             if (!audioStarted) {
-                audioEl.play().then(() => {
-                    audioStarted = true;
-                    console.log("🌊 Audio started");
-                }).catch(e => console.log("Audio requires gesture", e));
+                audioEl.play().then(() => { audioStarted = true; }).catch(e => console.log("Audio requires gesture", e));
             }
         }
-
-        const initEvents = ['click', 'touchstart'];
-        const handler = () => startAudio();
-        initEvents.forEach(ev => document.body.addEventListener(ev, handler, { once: false, passive: true }));
+        document.body.addEventListener('click', startAudio, { once: false, passive: true });
+        document.body.addEventListener('touchstart', startAudio, { once: false, passive: true });
         
-        // Cards interaction subtle (also can trigger audio)
-        const cards = document.querySelectorAll('.card');
-        cards.forEach(card => {
-            card.addEventListener('click', (e) => {
-                if (!e.target.closest('.btn')) startAudio();
-            });
-        });
-        
-        // Additional anti-copy measures
-        document.querySelectorAll('p, h1, h2, .header-text, .footer-note').forEach(el => {
-            el.addEventListener('copy', (e) => {
-                e.preventDefault();
-                return false;
-            });
-            el.addEventListener('cut', (e) => e.preventDefault());
-            el.addEventListener('dragstart', (e) => e.preventDefault());
-        });
-        
-        console.log("AFTER HOURS PVT — Custom logo loaded | Protected & Uncopyable");
+        console.log("AFTER HOURS PVT — Complete experience | Main + Gallery");
     })();
 </script>
 </body>
