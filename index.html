@@ -3,19 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <meta property="og:title" content="FROZEN X COMMUNITY | CYON EDITION">
-    <meta property="og:description" content="YouTube Content Creator | MTA & SAMP Developer | Cyan Theme">
-    <meta property="og:image" content="https://placehold.co/400x400/00e5ff/0a0a0a?text=FROZEN+CYAN">
+    <meta property="og:title" content="AFTER HOURS PVT | CYON EDITION">
+    <meta property="og:description" content="Exclusive Developer Community | MTA & SAMP | Cyan Theme">
+    <meta property="og:image" content="https://placehold.co/400x400/00e5ff/0a0a0a?text=AFTER+HOURS">
     <meta property="og:url" content="https://canalopa24hrs.site/">
     <meta property="og:type" content="website">
-    <title>AFTER HOURS PVT</title>
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%2300e5ff'/%3E%3Ctext x='50' y='70' font-size='50' text-anchor='middle' fill='%230a0a0a' font-weight='bold'%3EFX%3C/text%3E%3C/svg%3E">
+    <title>AFTER HOURS PVT | CYON</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%2300e5ff'/%3E%3Ctext x='50' y='70' font-size='50' text-anchor='middle' fill='%230a0a0a' font-weight='bold'%3EAH%3C/text%3E%3C/svg%3E">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            user-select: none; /* Prevents text selection/copy */
+            -webkit-tap-highlight-color: transparent;
         }
 
         body {
@@ -164,6 +166,7 @@
             transition: all 0.5s cubic-bezier(0.2, 0.9, 0.4, 1.1);
             object-fit: cover;
             background: #0a1217;
+            pointer-events: auto;
         }
 
         .logo img:hover {
@@ -238,6 +241,7 @@
             height: 100%;
             object-fit: cover;
             transition: transform 0.5s ease;
+            pointer-events: none;
         }
 
         .card:hover .card-img img {
@@ -274,6 +278,7 @@
             font-size: 0.8rem;
             box-shadow: 0 4px 12px rgba(0,0,0,0.3);
             border: none;
+            cursor: pointer;
         }
 
         .btn:hover {
@@ -373,6 +378,19 @@
             .logo img { width: 140px; height: 140px; }
             .header-text h1 { font-size: 2rem; }
         }
+
+        /* Disable text selection completely for all elements */
+        * {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        
+        /* Allow selection only on input/buttons if needed, but we keep clean */
+        .btn, a {
+            user-select: none;
+        }
     </style>
 </head>
 <body>
@@ -388,23 +406,22 @@
 <header>
     <div class="header-container">
         <div class="logo">
-            <!-- Cyan styled logo with frozen emblem -->
-            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Ccircle cx='100' cy='100' r='95' fill='%230e1a24' stroke='%2300e5ff' stroke-width='6'/%3E%3Cpath fill='%2300e5ff' d='M70,60 L130,60 L130,80 L100,100 L130,120 L130,140 L70,140 L70,120 L100,100 L70,80 Z'/%3E%3Ctext x='100' y='175' font-size='24' text-anchor='middle' fill='%23b5ffff' font-weight='bold'%3EFROZEN%3C/text%3E%3C/svg%3E"
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Ccircle cx='100' cy='100' r='95' fill='%230e1a24' stroke='%2300e5ff' stroke-width='6'/%3E%3Cpath fill='%2300e5ff' d='M70,60 L130,60 L130,80 L100,100 L130,120 L130,140 L70,140 L70,120 L100,100 L70,80 Z'/%3E%3Ctext x='100' y='175' font-size='24' text-anchor='middle' fill='%23b5ffff' font-weight='bold'%3EAH%3C/text%3E%3C/svg%3E"
                  alt="After Hours PVT">
         </div>
         <div class="header-text">
             <h1>❄️ AFTER HOURS PVT</h1>
-            <p>My Name is R E K T (rekt_ftw)</p>
+            <p>My discord Name is Я Σ K Ƭ (rekt_ftw)</p>
             <p>⚡ Developer | MTA.Lua, SAMP.pwn Specialist</p>
             <p>💻 JavaScript, CSS, HTML, PHP</p>
-            <p>🌊 Cyan Theme — Ice & Future Tech</p>
+            <p>🌊 With Love</p>
         </div>
     </div>
 </header>
 
 <main>
     <div class="grid-container">
-        <!-- Discord Card - Cyan -->
+        <!-- Discord Card -->
         <div class="card">
             <div class="card-img">
                 <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%235865F2' rx='22'/%3E%3Cpath fill='white' d='M70,35c-2.5-1.2-5.2-2-8-2.5c-0.4,0.7-0.8,1.5-1.1,2.3c-3-0.5-6-0.5-9,0c-0.3-0.8-0.7-1.6-1.1-2.3c-2.8,0.5-5.5,1.3-8,2.5c-5,7-6.5,14-5.8,21c2.2,1.6,4.6,2.9,7.1,3.8c0.6-0.8,1.1-1.7,1.5-2.6c-0.8-0.3-1.6-0.7-2.4-1.1c0.2-0.2,0.4-0.3,0.6-0.5c4.8,2.2,10,2.2,14.8,0c0.2,0.2,0.4,0.3,0.6,0.5c-0.8,0.4-1.6,0.8-2.4,1.1c0.4,0.9,0.9,1.8,1.5,2.6c2.5-0.9,4.9-2.2,7.1-3.8C76.5,49,75,42,70,35z M42,55c-2.2,0-4-2-4-4.5s1.8-4.5,4-4.5s4,2,4,4.5S44.2,55,42,55z M58,55c-2.2,0-4-2-4-4.5s1.8-4.5,4-4.5s4,2,4,4.5S60.2,55,58,55z'/%3E%3C/svg%3E"
@@ -464,21 +481,40 @@
         <h2>🌀 Latest Videos</h2>
         <div class="video-container">
             <div class="video-wrapper">
-                <iframe src="https://www.youtube.com/embed/3mpWDW22Z-s" title="Frozen X Cyan Video 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/3mpWDW22Z-s" title="After Hours PVT Video 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             <div class="video-wrapper">
-                <iframe src="https://www.youtube.com/embed/S2kSJ8g_9L4" title="Frozen X Cyan Video 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/S2kSJ8g_9L4" title="After Hours PVT Video 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>
     </section>
 </main>
 
 <div class="footer-note">
-    <i class="fas fa-icicles" style="color:#00e5ff"></i> FROZEN X CYON — Code. Create. Conquer. <i class="fas fa-water" style="color:#2afcff"></i>
+    <i class="fas fa-moon" style="color:#00e5ff"></i> AFTER HOURS PVT — Code. Create. Dominate. <i class="fas fa-water" style="color:#2afcff"></i>
 </div>
 
 <script>
     (function() {
+        // Disable right-click context menu to prevent copy attempts
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+            return false;
+        });
+        
+        // Disable keyboard shortcuts for copy (Ctrl+C, Ctrl+U, Ctrl+S)
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && (e.key === 'c' || e.key === 'C' || e.key === 'u' || e.key === 'U' || e.key === 's' || e.key === 'S')) {
+                e.preventDefault();
+                return false;
+            }
+            // Also disable F12, Ctrl+Shift+I (dev tools shortcuts)
+            if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'i'))) {
+                e.preventDefault();
+                return false;
+            }
+        });
+        
         // CYON floating animated icons (tech & gaming)
         const bgContainer = document.querySelector('.background-icons');
         const iconList = [
@@ -531,7 +567,7 @@
             }
         }
 
-        const initEvents = ['click', 'touchstart', 'keydown'];
+        const initEvents = ['click', 'touchstart'];
         const handler = () => startAudio();
         initEvents.forEach(ev => document.body.addEventListener(ev, handler, { once: false, passive: true }));
         
@@ -543,7 +579,17 @@
             });
         });
         
-        console.log("FROZEN X | CYON THEME ACTIVE — ice & cyan vibes");
+        // Additional anti-copy: disable selection via CSS is already set, but also via JS
+        document.querySelectorAll('p, h1, h2, .header-text, .footer-note').forEach(el => {
+            el.addEventListener('copy', (e) => {
+                e.preventDefault();
+                return false;
+            });
+            el.addEventListener('cut', (e) => e.preventDefault());
+            el.addEventListener('dragstart', (e) => e.preventDefault());
+        });
+        
+        console.log("AFTER HOURS PVT | CYON THEME — Protected & Uncopyable");
     })();
 </script>
 </body>
