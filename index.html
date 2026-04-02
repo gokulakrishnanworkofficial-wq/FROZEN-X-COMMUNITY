@@ -2,489 +2,547 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="FORZEN X COMMUNITY">
-    <meta property="og:description" content="YouTube Content Creator">
-    <meta property="og:image" content="https://yourdomain.com/logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta property="og:title" content="FROZEN X COMMUNITY">
+    <meta property="og:description" content="YouTube Content Creator | MTA & SAMP Developer">
+    <meta property="og:image" content="https://placehold.co/400x400/ff0000/white?text=FROZEN">
     <meta property="og:url" content="https://canalopa24hrs.site/">
     <meta property="og:type" content="website">
-    <title>FROZEN X COMMUNITY</title>
-    <link rel="icon" href="logo.png" type="image/png">
+    <title>FROZEN X COMMUNITY | REKT_FTW</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23ff0000'/%3E%3Ctext x='50' y='70' font-size='50' text-anchor='middle' fill='white' font-weight='bold'%3EFX%3C/text%3E%3C/svg%3E">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-body {
-    background-color: #0a0a0a;
-    color: white;
-    font-family: 'Arial', sans-serif;
-    overflow-x: hidden;
-    position: relative;
-    min-height: 100vh;
-}
+        body {
+            background-color: #0a0a0a;
+            color: white;
+            font-family: 'Segoe UI', 'Arial', sans-serif;
+            overflow-x: hidden;
+            position: relative;
+            min-height: 100vh;
+        }
 
-.background-icons {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: -1;
-}
+        /* Animated gradient background */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 30%, rgba(255,0,0,0.08), transparent 70%);
+            pointer-events: none;
+            z-index: -2;
+        }
 
-.foreground-icons {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 9999;
-}
+        .background-icons, .foreground-icons {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
 
-.floating-icon {
-    position: absolute;
-    color: #ff0000;
-    opacity: 0.1;
-    animation: floatIcon 20s linear infinite;
-}
+        .foreground-icons {
+            z-index: 9999;
+        }
 
-.rain-icon {
-    position: absolute;
-    animation: iconRain 8s linear infinite;
-}
+        .floating-icon {
+            position: absolute;
+            color: #ff0000;
+            opacity: 0.12;
+            animation: floatIcon 22s linear infinite;
+            filter: drop-shadow(0 0 2px rgba(255,0,0,0.5));
+        }
 
-.rain-icon.red {
-    color: #ff0000;
-    opacity: 0.3;
-}
+        .rain-icon {
+            position: absolute;
+            animation: iconRain 9s linear infinite;
+        }
 
-.rain-icon.white {
-    color: #ffffff;
-    opacity: 0.2;
-}
+        .rain-icon.red {
+            color: #ff0000;
+            opacity: 0.35;
+        }
 
-@keyframes floatIcon {
-    0% {
-        transform: translateY(100vh) rotate(0deg);
-    }
-    50% {
-        transform: translateY(50vh) rotate(180deg) translateX(100px);
-    }
-    100% {
-        transform: translateY(-100px) rotate(360deg);
-    }
-}
+        .rain-icon.white {
+            color: #ffffff;
+            opacity: 0.25;
+        }
 
-@keyframes iconRain {
-    0% {
-        transform: translateY(-100px) rotate(0deg);
-    }
-    100% {
-        transform: translateY(100vh) rotate(360deg);
-    }
-}
+        @keyframes floatIcon {
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+            10% { opacity: 0.15; }
+            90% { opacity: 0.15; }
+            100% { transform: translateY(-100px) rotate(360deg); opacity: 0; }
+        }
 
-.header-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 3rem;
-    padding: 3rem;
-    animation: fadeDown 1s ease;
-    margin: 2rem;
-}
+        @keyframes iconRain {
+            0% { transform: translateY(-150px) rotate(0deg); opacity: 0; }
+            10% { opacity: 0.4; }
+            90% { opacity: 0.4; }
+            100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+        }
 
-.header-text {
-    text-align: left;
-    animation: fadeIn 1s ease;
-}
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 3rem;
+            padding: 2rem 3rem;
+            animation: fadeDown 1s ease;
+            margin: 1rem 2rem;
+            flex-wrap: wrap;
+        }
 
-.header-text h1 {
-    font-size: 2.5rem;
-    color: #ff0000;
-    margin-bottom: 1rem;
-    text-transform: uppercase;
-    font-weight: 800;
-    letter-spacing: 2px;
-    text-shadow: 2px 2px 4px rgba(255, 0, 0, 0.3);
-}
+        .header-text {
+            text-align: left;
+            animation: fadeIn 1s ease;
+            background: rgba(0,0,0,0.5);
+            backdrop-filter: blur(4px);
+            padding: 1.5rem;
+            border-radius: 30px;
+            border-left: 4px solid #ff0000;
+        }
 
-.header-text p {
-    font-size: 1.2rem;
-    color: #ffffff;
-    margin: 0.5rem 0;
-    font-weight: 300;
-    letter-spacing: 1px;
-    position: relative;
-    padding-left: 20px;
-}
+        .header-text h1 {
+            font-size: 2.8rem;
+            color: #ff0000;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            font-weight: 800;
+            letter-spacing: 3px;
+            text-shadow: 0 0 8px rgba(255,0,0,0.6);
+        }
 
-.header-text p::before {
-    content: '▹';
-    position: absolute;
-    left: 0;
-    color: #ff0000;
-}
+        .header-text p {
+            font-size: 1.2rem;
+            color: #f0f0f0;
+            margin: 0.6rem 0;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+            position: relative;
+            padding-left: 24px;
+        }
 
-.logo img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    border: 4px solid #ff0000;
-    box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
-    transition: transform 0.5s ease, box-shadow 0.5s ease;
-    loading: lazy;
-}
+        .header-text p::before {
+            content: '✦';
+            position: absolute;
+            left: 0;
+            color: #ff0000;
+            font-weight: bold;
+        }
 
-.logo img:hover {
-    transform: scale(1.1) rotate(360deg);
-    box-shadow: 0 0 30px rgba(255, 0, 0, 0.5);
-}
+        .logo img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 4px solid #ff0000;
+            box-shadow: 0 0 25px rgba(255, 0, 0, 0.5);
+            transition: all 0.5s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+            object-fit: cover;
+            background: #111;
+        }
 
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 1.5rem;
-    padding: 2rem;
-    max-width: 1800px;
-    margin: 0 auto;
-}
+        .logo img:hover {
+            transform: scale(1.08) rotate(5deg);
+            box-shadow: 0 0 40px rgba(255, 0, 0, 0.8);
+            border-color: #ff4444;
+        }
 
-.card {
-    background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
-    border-radius: 20px;
-    padding: 1.5rem;
-    text-align: center;
-    transition: all 0.4s ease;
-    border: 2px solid #ff000050;
-    position: relative;
-    overflow: hidden;
-    animation: fadeIn 0.5s ease;
-}
+        /* Grid cards */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 1.8rem;
+            padding: 2rem 3rem;
+            max-width: 1800px;
+            margin: 0 auto;
+        }
 
-.card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 0, 0, 0.1), transparent);
-    transition: 0.5s;
-}
+        .card {
+            background: linear-gradient(145deg, #202020, #121212);
+            border-radius: 28px;
+            padding: 1.8rem 1.2rem;
+            text-align: center;
+            transition: all 0.4s ease;
+            border: 1px solid rgba(255,0,0,0.3);
+            backdrop-filter: blur(2px);
+            position: relative;
+            overflow: hidden;
+            animation: fadeIn 0.6s ease;
+            cursor: pointer;
+        }
 
-.card:hover::before {
-    left: 100%;
-}
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 50, 50, 0.15), transparent);
+            transition: 0.6s;
+        }
 
-.card:hover {
-    transform: translateY(-15px) scale(1.02);
-    box-shadow: 0 10px 30px rgba(255, 0, 0, 0.2);
-    border-color: #ff0000;
-}
+        .card:hover::before {
+            left: 100%;
+        }
 
-.card img {
-    width: 150px;
-    height: 150px;
-    border-radius: 15px;
-    margin-bottom: 1.5rem;
-    transition: transform 0.5s ease;
-    object-fit: cover;
-    loading: lazy;
-}
+        .card:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: 0 20px 35px rgba(255, 0, 0, 0.25);
+            border-color: #ff3a3a;
+        }
 
-.card:hover img {
-    transform: scale(1.1);
-}
+        /* App style image wrapper with fallback */
+        .card-img {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 1.2rem;
+            background: #1e1e1e;
+            border-radius: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.4s ease;
+            overflow: hidden;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+        }
 
-.card h2 {
-    color: #ff0000;
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-    text-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
-}
+        .card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
 
-.card p {
-    color: #cccccc;
-    margin-bottom: 1.5rem;
-    font-size: 1rem;
-    line-height: 1.4;
-}
+        .card:hover .card-img img {
+            transform: scale(1.08);
+        }
 
-.btn {
-    display: inline-block;
-    background: linear-gradient(45deg, #ff0000 visits, #ffd700);
-    color: white;
-    padding: 0.8rem 1.5rem;
-    text-decoration: none;
-    border-radius: 30px;
-    transition: all 0.3s ease;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    position: relative;
-    overflow: hidden;
-}
+        .card h2 {
+            color: #ff3a3a;
+            margin-bottom: 0.8rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.3px;
+        }
 
-.btn:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
-}
+        .card p {
+            color: #bbbbbb;
+            margin-bottom: 1.4rem;
+            font-size: 0.9rem;
+            line-height: 1.4;
+            padding: 0 0.3rem;
+        }
 
-.btn::after {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: rgba(255, 255, 255, 0.1);
-    transform: rotate(45deg);
-    transition: 0.5s;
-}
+        .btn {
+            display: inline-block;
+            background: linear-gradient(95deg, #cc0000, #ff4d4d);
+            color: white;
+            padding: 0.7rem 1.4rem;
+            text-decoration: none;
+            border-radius: 40px;
+            transition: all 0.25s ease;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.8rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            border: none;
+        }
 
-.btn:hover::after {
-    left: 100%;
-}
+        .btn:hover {
+            transform: scale(1.05);
+            background: linear-gradient(95deg, #ff2222, #ff7777);
+            box-shadow: 0 0 18px rgba(255, 0, 0, 0.6);
+        }
 
-.video-section {
-    padding: 4rem 2rem;
-    text-align: center;
-}
+        /* Video section */
+        .video-section {
+            padding: 3rem 2rem 5rem;
+            text-align: center;
+        }
 
-.video-section h2 {
-    color: #ff0000;
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    text-shadow: 2px 2px 4px rgba(255, 0, 0, 0.3);
-}
+        .video-section h2 {
+            color: #ff2a2a;
+            font-size: 2.4rem;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            display: inline-block;
+            border-bottom: 3px solid #ff0000;
+            padding-bottom: 0.5rem;
+        }
 
-.video-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
+        .video-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
 
-.video-wrapper {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    overflow: hidden;
-    border-radius: 15px;
-    border: 3px solid #ff0000;
-    box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 24px;
+            border: 2px solid #ff3a3a;
+            box-shadow: 0 12px 28px rgba(0,0,0,0.5);
+            transition: all 0.3s ease;
+            background: #000;
+        }
 
-.video-wrapper:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 0 30px rgba(255, 0, 0, 0.4);
-}
+        .video-wrapper:hover {
+            transform: translateY(-6px);
+            border-color: #ff7a7a;
+            box-shadow: 0 0 28px rgba(255, 0, 0, 0.4);
+        }
 
-.video-wrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    loading: lazy;
-}
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
 
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
+        /* Footer */
+        .footer-note {
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.85rem;
+            color: #888;
+            border-top: 1px solid rgba(255,0,0,0.2);
+            margin-top: 1rem;
+        }
 
-@keyframes fadeDown {
-    from { opacity: 0; transform: translateY(-50px); }
-    to { opacity: 1; transform: translateY(0); }
-}
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(25px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
 
-@media (max-width: 1600px) {
-    .grid-container {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
+        @keyframes fadeDown {
+            from { opacity: 0; transform: translateY(-40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
 
-@media (max-width: 992px) {
-    .grid-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-    .header-container {
-        flex-direction: column;
-        text-align: center;
-        gap: 2rem;
-    }
-
-    .header-text {
-        text-align: center;
-    }
-
-    .header-text p {
-        padding-left: 0;
-    }
-
-    .header-text p::before {
-        display: none;
-    }
-
-    .video-container {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 576px) {
-    .grid-container {
-        grid-template-columns: 1fr;
-    }
-}
-
+        /* Responsive */
+        @media (max-width: 1400px) {
+            .grid-container { grid-template-columns: repeat(3, 1fr); gap: 1.5rem; padding: 2rem; }
+        }
+        @media (max-width: 900px) {
+            .grid-container { grid-template-columns: repeat(2, 1fr); }
+            .header-container { flex-direction: column; text-align: center; gap: 1.5rem; }
+            .header-text { text-align: center; border-left: none; border-top: 3px solid #ff0000; }
+            .header-text p { padding-left: 0; }
+            .header-text p::before { display: none; }
+        }
+        @media (max-width: 650px) {
+            .grid-container { grid-template-columns: 1fr; max-width: 380px; margin: 0 auto; }
+            .video-container { grid-template-columns: 1fr; }
+            .logo img { width: 140px; height: 140px; }
+            .header-text h1 { font-size: 2rem; }
+        }
     </style>
 </head>
 <body>
-    <!-- Assets (logo.png, https://audio.jukehost.co.uk/UncosaROTnwuhPux4ACO1xXzFxganHnN, discord.png, youtube.png, instagram.png, mods.png, host.png) must be in the same directory or hosted online -->
-    <div class="background-icons"></div>
-    <div class="foreground-icons"></div>
-    <audio id="backgroundAudio" loop>
-        <source src="https://audio.jukehost.co.uk/UncosaROTnwuhPux4ACO1xXzFxganHnN" type="https://audio.jukehost.co.uk/UncosaROTnwuhPux4ACO1xXzFxganHnN">
-        Your browser does not support the audio element.
-    </audio>
 
-    <header>
-        <div class="header-container">
-            <div class="logo">
-                <img src="logo.png" alt="Logo">
-            </div>
-            <div class="header-text">
-                <h1>FROZEN X CMT</h1>
-                <p>My Name is R E K T (rekt_ftw)</p>
-                <p>Developer </p>
-                <p>MTA.Lua,SAMP.pwn Developer</p>
-                <p>JavaScript, CSS, HTML, PHP</p>
-            </div>
+<div class="background-icons"></div>
+<div class="foreground-icons"></div>
+
+<!-- Background audio (user interaction required) -->
+<audio id="bgAudio" loop preload="auto">
+    <source src="https://audio.jukehost.co.uk/UncosaROTnwuhPux4ACO1xXzFxganHnN" type="audio/mpeg">
+    Your browser does not support audio.
+</audio>
+
+<header>
+    <div class="header-container">
+        <div class="logo">
+            <!-- embedded base64 logo: FROZEN X style emblem (red/white) -->
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Ccircle cx='100' cy='100' r='95' fill='%23111111' stroke='%23ff0000' stroke-width='5'/%3E%3Cpath fill='%23ff0000' d='M70,60 L130,60 L130,80 L100,100 L130,120 L130,140 L70,140 L70,120 L100,100 L70,80 Z'/%3E%3Ctext x='100' y='175' font-size='24' text-anchor='middle' fill='white' font-weight='bold'%3EFROZEN%3C/text%3E%3C/svg%3E"
+                 alt="Frozen X Logo">
         </div>
-    </header>
+        <div class="header-text">
+            <h1>❄️ FROZEN X CMT</h1>
+            <p>My Name is R E K T (rekt_ftw)</p>
+            <p>⚡ Developer | MTA.Lua, SAMP.pwn Specialist</p>
+            <p>💻 JavaScript, CSS, HTML, PHP</p>
+            <p>🎮 Community Builder & Creator</p>
+        </div>
+    </div>
+</header>
 
-    <main>
-        <div class="grid-container">
-            <div class="card">
-                <img src="discord.png" alt="Discord">
-                <h2>Discord</h2>
-                <p>Join our amazing Discord community and participate in exclusive events!</p>
-                <a href="https://discord.gg/eh4V7dsh9V" target="_blank" class="btn">Let's Go</a>
+<main>
+    <div class="grid-container">
+        <!-- Discord Card -->
+        <div class="card">
+            <div class="card-img">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%235865F2' rx='20'/%3E%3Cpath fill='white' d='M70,35c-2.5-1.2-5.2-2-8-2.5c-0.4,0.7-0.8,1.5-1.1,2.3c-3-0.5-6-0.5-9,0c-0.3-0.8-0.7-1.6-1.1-2.3c-2.8,0.5-5.5,1.3-8,2.5c-5,7-6.5,14-5.8,21c2.2,1.6,4.6,2.9,7.1,3.8c0.6-0.8,1.1-1.7,1.5-2.6c-0.8-0.3-1.6-0.7-2.4-1.1c0.2-0.2,0.4-0.3,0.6-0.5c4.8,2.2,10,2.2,14.8,0c0.2,0.2,0.4,0.3,0.6,0.5c-0.8,0.4-1.6,0.8-2.4,1.1c0.4,0.9,0.9,1.8,1.5,2.6c2.5-0.9,4.9-2.2,7.1-3.8C76.5,49,75,42,70,35z M42,55c-2.2,0-4-2-4-4.5s1.8-4.5,4-4.5s4,2,4,4.5S44.2,55,42,55z M58,55c-2.2,0-4-2-4-4.5s1.8-4.5,4-4.5s4,2,4,4.5S60.2,55,58,55z'/%3E%3C/svg%3E"
+                     alt="Discord app icon">
             </div>
-
-            <div class="card">
-                <img src="youtube.png" alt="YouTube">
-                <h2>YouTube</h2>
-                <p>Exclusive content, gameplays, and tutorials on our official channel!</p>
-                <a href="https://youtube.com/@jsmtricky?si=tu1bLQtpYt-fAWdZ" target="_blank" class="btn">Let's Go</a>
-            </div>
-
-            <div class="card">
-                <img src="instagram.png" alt="Instagram">
-                <h2>Instagram</h2>
-                <p>Stay updated with news and behind-the-scenes in real time!</p>
-                <a href="https://www.instagram.com/wanted_trippy/" target="_blank" class="btn">Let's Go</a>
-            </div>
-
-            <div class="card">
-                <img src="mods.png" alt="Mods">
-                <h2>Free Mods Site</h2>
-                <p>Explore our exclusive collection of mods and customize your experience!</p>
-                <a href="https://panel.marmatheevu.fun/" target="_blank" class="btn">Let's Go</a>
-            </div>
-
-            <div class="card">
-                <img src="host.png" alt="Host">
-                <h2>Hosting</h2>
-                <p>High-performance servers with 24/7 support for your project!</p>
-                <a href="https://discord.gg/Rh76f8anpA" target="_blank" class="btn">Let's Go</a>
-            </div>
+            <h2>Discord</h2>
+            <p>Join our exclusive community, events, and live chats with developers!</p>
+            <a href="https://discord.gg/eh4V7dsh9V" target="_blank" class="btn">Join Now</a>
         </div>
 
-        <section class="video-section">
-            <h2>Latest Videos</h2>
-            <div class="video-container">
-                <div class="video-wrapper">
-                    <iframe src="https://youtu.be/3mpWDW22Z-s?si=PIjq1zWNxVdIG2rz" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-                <div class="video-wrapper">
-                    <iframe src="https://youtu.be/S2kSJ8g_9L4?si=o3dig-kTRvprofjA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
+        <!-- YouTube Card -->
+        <div class="card">
+            <div class="card-img">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23FF0000' rx='20'/%3E%3Cpath fill='white' d='M70,45L45,30v30L70,45z'/%3E%3C/svg%3E"
+                     alt="YouTube app icon">
             </div>
-        </section>
-    </main>
+            <h2>YouTube</h2>
+            <p>Gameplays, tutorials, and exclusive content. Subscribe now!</p>
+            <a href="https://youtube.com/@jsmtricky?si=tu1bLQtpYt-fAWdZ" target="_blank" class="btn">Watch Now</a>
+        </div>
 
-    <script>
-        function createFloatingIcons() {
-            const container = document.querySelector('.background-icons');
-            const iconCount = 24;
-            const icons = [
-                'fa-clock', 'fa-car', 'fa-motorcycle', 'fa-hourglass',
-                'fa-stopwatch', 'fa-car-side', 'fa-truck', 'fa-bicycle',
-                'fa-helicopter', 'fa-plane', 'fa-rocket', 'fa-gamepad',
-                'fa-code', 'fa-terminal', 'fa-laptop-code'
-            ];
+        <!-- Instagram Card -->
+        <div class="card">
+            <div class="card-img">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23E4405F' rx='25'/%3E%3Ccircle cx='50' cy='50' r='14' fill='white'/%3E%3Ccircle cx='50' cy='50' r='22' fill='none' stroke='white' stroke-width='4'/%3E%3Ccircle cx='73' cy='27' r='4' fill='white'/%3E%3C/svg%3E"
+                     alt="Instagram icon">
+            </div>
+            <h2>Instagram</h2>
+            <p>Behind the scenes, updates, and daily stories from REKT.</p>
+            <a href="https://www.instagram.com/wanted_trippy/" target="_blank" class="btn">Follow</a>
+        </div>
 
-            for (let i = 0; i < iconCount; i++) {
-                const icon = document.createElement('i');
-                const randomIcon = icons[Math.floor(Math.random() * icons.length)];
-                icon.className = `fas ${randomIcon} floating-icon`;
-                icon.style.left = `${Math.random() * 100}%`;
-                icon.style.animationDelay = `${Math.random() * 15}s`;
-                icon.style.fontSize = `${Math.random() * 20 + 20}px`;
-                container.appendChild(icon);
+        <!-- Free Mods Site Card -->
+        <div class="card">
+            <div class="card-img">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%232c3e50' rx='20'/%3E%3Cpath fill='%23f1c40f' d='M30,35h40v8H30z M30,50h30v8H30z M30,65h20v8H30z'/%3E%3Ctext x='70' y='75' fill='white' font-size='28'%3E⚙%3C/text%3E%3C/svg%3E"
+                     alt="Mods site">
+            </div>
+            <h2>Free Mods Site</h2>
+            <p>Exclusive mods, scripts, and resources for MTA & SA-MP!</p>
+            <a href="https://panel.marmatheevu.fun/" target="_blank" class="btn">Explore</a>
+        </div>
+
+        <!-- Hosting Card -->
+        <div class="card">
+            <div class="card-img">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23007396' rx='20'/%3E%3Cpath fill='white' d='M50,25c-13,0-23,10-23,23c0,8,4,15,10,19v8c0,2,2,4,4,4h18c2,0,4-2,4-4v-8c6-4,10-11,10-19C73,35,63,25,50,25z M50,40c3,0,5,2,5,5s-2,5-5,5s-5-2-5-5S47,40,50,40z'/%3E%3C/svg%3E"
+                     alt="Hosting server">
+            </div>
+            <h2>Hosting</h2>
+            <p>24/7 high-performance servers with top support for your projects.</p>
+            <a href="https://discord.gg/Rh76f8anpA" target="_blank" class="btn">Get Hosting</a>
+        </div>
+    </div>
+
+    <section class="video-section">
+        <h2>📺 Latest Videos</h2>
+        <div class="video-container">
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/3mpWDW22Z-s" title="Frozen X Video 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/S2kSJ8g_9L4" title="Frozen X Video 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+</main>
+
+<div class="footer-note">
+    <i class="fas fa-snowflake" style="color:#ff0000"></i> FROZEN X COMMUNITY — Coding, Modding, Gaming <i class="fas fa-fire" style="color:#ff6666"></i>
+</div>
+
+<script>
+    (function() {
+        // Create floating background icons (cars, code, game)
+        const bgContainer = document.querySelector('.background-icons');
+        const floatingIconsList = [
+            'fa-clock', 'fa-car', 'fa-motorcycle', 'fa-hourglass-half',
+            'fa-stopwatch', 'fa-car-side', 'fa-truck-fast', 'fa-bicycle',
+            'fa-helicopter', 'fa-plane', 'fa-rocket', 'fa-gamepad',
+            'fa-code', 'fa-terminal', 'fa-laptop-code', 'fa-dice-d6',
+            'fa-head-side-goggles', 'fa-microchip'
+        ];
+        for (let i = 0; i < 32; i++) {
+            const icon = document.createElement('i');
+            const randIcon = floatingIconsList[Math.floor(Math.random() * floatingIconsList.length)];
+            icon.className = `fas ${randIcon} floating-icon`;
+            icon.style.left = `${Math.random() * 100}%`;
+            const duration = 15 + Math.random() * 18;
+            icon.style.animationDuration = `${duration}s`;
+            icon.style.animationDelay = `${Math.random() * 20}s`;
+            const size = 18 + Math.random() * 28;
+            icon.style.fontSize = `${size}px`;
+            icon.style.opacity = 0.08 + Math.random() * 0.12;
+            bgContainer.appendChild(icon);
+        }
+
+        // Raining icons (foreground)
+        const fgContainer = document.querySelector('.foreground-icons');
+        const rainIconsSet = ['fa-clock', 'fa-stopwatch', 'fa-hourglass-half', 'fa-timer', 'fa-hourglass-start', 'fa-hourglass-end'];
+        for (let i = 0; i < 14; i++) {
+            const icon = document.createElement('i');
+            const randIcon = rainIconsSet[Math.floor(Math.random() * rainIconsSet.length)];
+            const isRed = Math.random() > 0.55;
+            icon.className = `fas ${randIcon} rain-icon ${isRed ? 'red' : 'white'}`;
+            icon.style.left = `${Math.random() * 100}%`;
+            const duration = 6 + Math.random() * 5;
+            icon.style.animationDuration = `${duration}s`;
+            icon.style.animationDelay = `${Math.random() * 6}s`;
+            icon.style.fontSize = `${14 + Math.random() * 22}px`;
+            fgContainer.appendChild(icon);
+        }
+
+        // Audio handling: play on first user interaction (any click or touch)
+        const audioEl = document.getElementById('bgAudio');
+        let audioStarted = false;
+
+        function startAudio() {
+            if (!audioStarted) {
+                audioEl.play().then(() => {
+                    audioStarted = true;
+                    console.log("Background audio started");
+                }).catch(e => console.log("Audio play blocked until gesture", e));
             }
         }
 
-        function createRainingIcons() {
-            const container = document.querySelector('.foreground-icons');
-            const iconCount = 8;
-            const icons = ['fa-clock', 'fa-stopwatch', 'fa-hourglass', 'fa-timer'];
-
-            for (let i = 0; i < iconCount; i++) {
-                const icon = document.createElement('i');
-                const randomIcon = icons[Math.floor(Math.random() * icons.length)];
-                const isRed = Math.random() > 0.5;
-                icon.className = `fas ${randomIcon} rain-icon ${isRed ? 'red' : 'white'}`;
-                icon.style.left = `${Math.random() * 100}%`;
-                icon.style.animationDelay = `${Math.random() * 5}s`;
-                icon.style.fontSize = `${Math.random() * 20 + 15}px`;
-                container.appendChild(icon);
-            }
-        }
-
-        document.addEventListener('DOMContentLoaded', function() {
-            const audio = document.getElementById('backgroundAudio');
-            
-            document.body.addEventListener('click', function() {
-                audio.play();
-            }, { once: true });
-            
-            const cards = document.querySelectorAll('.card');
-            cards.forEach(card => {
-                card.addEventListener('mouseenter', function() {
-                    audio.play();
-                }, { once: true });
+        // Global event listeners for starting audio (once)
+        const events = ['click', 'touchstart', 'keydown'];
+        events.forEach(ev => {
+            document.body.addEventListener(ev, startAudio, { once: false, passive: true });
+            // but we also ensure it only tries to start once. Use a flag wrapper
+        });
+        // Refined: avoid multiple calls but safe
+        const originalStart = startAudio;
+        window.startAudioOnce = function() {
+            if (!audioStarted) originalStart();
+        };
+        document.body.addEventListener('click', window.startAudioOnce);
+        document.body.addEventListener('touchstart', window.startAudioOnce);
+        
+        // Also enable hover on cards not needed to spam, but we keep clean
+        // Interactive card shine effect
+        const cards = document.querySelectorAll('.card');
+        cards.forEach(card => {
+            card.addEventListener('click', (e) => {
+                // do not interfere with links inside card
+                if (e.target.tagName !== 'A' && !e.target.closest('.btn')) {
+                    startAudio(); // gentle background start on card click
+                }
             });
         });
 
-        createFloatingIcons();
-        createRainingIcons();
-    </script>
+        // small fix for embedded video thumbnails to allow audio context
+        console.log("FROZEN X community page ready — dynamic icons & apps");
+    })();
+</script>
 </body>
 </html>
